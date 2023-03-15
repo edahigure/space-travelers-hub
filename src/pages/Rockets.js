@@ -1,10 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-export default function Rockets() {
-  return (
-    <div>
-      Rockets
-    </div>
-  )
-}
+const Rockets = () => (
+  <div className="rockets-title">Rockets</div>
+);
 
+export default Rockets;
