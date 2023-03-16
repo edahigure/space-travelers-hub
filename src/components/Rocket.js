@@ -91,11 +91,11 @@ Rocket.defaultProps = {
 };
 
 Rocket.propTypes = {
-  reserved: PropTypes.string,
+  reserved: PropTypes.bool,
 };
 
 Rocket.defaultProps = {
-  reserved: '',
+  reserved: false,
 };
 
 export default Rocket;
