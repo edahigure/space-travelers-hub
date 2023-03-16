@@ -70,7 +70,15 @@
   text-decoration-style: initial;
 }
 
+.li-active-profile {
+  text-decoration-style: initial;
+  border-left: solid 2px black;
+  padding-left: 24px;
+}
+
+
 .li-item-profile {
+  text-decoration: none;
   border-left: solid 2px black;
   padding-left: 24px;
 }
@@ -128,4 +136,24 @@ width :200px;
   border-radius: 4px;
   width: 150px;
   height: 35px;
+}
+
+.container-profile {
+  border-radius: 4px;
+  border: solid 1px grey;
+  border-bottom-style: none;
+  width: 50%;
+}
+
+.container-profile-item {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid 1px grey;
+  width: 100%;
+}
+
+.wrapper {
+  display : flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

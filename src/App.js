@@ -27,7 +27,7 @@ function App() {
           >Rockets</NavLink></li>
           <li><NavLink to="/missions" className={({ isActive }) => (isActive ? "li-active" : "li-item")}
           >Missions</NavLink></li>
-          <li><NavLink to="/profile" className={({ isActive }) => (isActive ? "li-active" : "li-item-profile")}
+          <li><NavLink to="/profile" className={({ isActive }) => (isActive ? "li-active-profile" : "li-item-profile")}
           >My Profile</NavLink></li>
         </ul>
       </nav>
