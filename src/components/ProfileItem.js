@@ -1,4 +1,5 @@
-import React from 'react'
+import PropTypes from 'prop-types';
+import React from 'react';
 
 function ProfileItem(props) {
   const {
@@ -8,7 +9,15 @@ function ProfileItem(props) {
     <div className="container-profile-item">
       {rocketName}
     </div>
-  )
+  );
 }
 
-export default ProfileItem
+export default ProfileItem;
+
+ProfileItem.propTypes = {
+  rocketName: PropTypes.string,
+};
+
+ProfileItem.defaultProps = {
+  rocketName: 'none',
+};

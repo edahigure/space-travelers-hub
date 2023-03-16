@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 /* eslint-disable import/no-extraneous-dependencies */
 import axios from 'axios';
 
-
 const url = 'https://api.spacexdata.com/v4/rockets';
 
 export const fetchRockets = createAsyncThunk('books/fetchBooks', async () => {
@@ -29,30 +28,24 @@ const rocketSlice = createSlice({
     reserveRocket: (state, action) => {
       const { id } = action.payload;
 
-       const newRocketList = state.rocketList.map((rocket) => {
-       
-        if (rocket.id !== id) { 
-          return { ...rocket }
+      const newRocketList = state.rocketList.map((rocket) => {
+        if (rocket.id !== id) {
+          return { ...rocket };
         }
-        return { ...rocket, reserved: true } 
-      }) 
-      console.log(newRocketList);
-      return { rocketList: newRocketList, status: state.status }
-    
+        return { ...rocket, reserved: true };
+      });
+      return { rocketList: newRocketList, status: state.status };
     },
     cancelRocket: (state, action) => {
       const { id } = action.payload;
 
-       const newRocketList = state.rocketList.map((rocket) => {
-       
-        if (rocket.id !== id) { 
-          return { ...rocket }
+      const newRocketList = state.rocketList.map((rocket) => {
+        if (rocket.id !== id) {
+          return { ...rocket };
         }
-        return { ...rocket, reserved: false } 
-      }) 
-      console.log(newRocketList);
-      return { rocketList: newRocketList, status: state.status }
-    
+        return { ...rocket, reserved: false };
+      });
+      return { rocketList: newRocketList, status: state.status };
     },
   },
   extraReducers(builder) {
@@ -70,7 +63,6 @@ const rocketSlice = createSlice({
           newRocketList.push(newRocket);
         });
         state.rocketList = newRocketList;
-
       });
   },
 

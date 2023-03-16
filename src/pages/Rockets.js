@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
-import Rocket from '../components/Rocket'
+import Rocket from '../components/Rocket';
 
 export default function Rockets() {
   const dispatch = useDispatch();
   const {
     rocketList,
-    status
+    status,
   } = useSelector((store) => store.rocket);
 
   useEffect(() => {
@@ -31,11 +30,9 @@ export default function Rockets() {
     />);
   }
 
-
   return (
     <div className="listRockets">
       {myRockets}
     </div>
-  )
+  );
 }
-

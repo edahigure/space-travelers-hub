@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, cancelRocket } from '../redux/rockets/rocketsSlice';
 
-
 const Rocket = (props) => {
   const {
     id,
@@ -15,41 +14,49 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
   return (
     <div className="rocketCard">
-      <img src={flickrImages} className="rocketImg" />
+      <img src={flickrImages} className="rocketImg" alt="rocket" />
 
       {!reserved && (
 
-        <div className="rocketInfo"  >
+        <div className="rocketInfo">
           <div>{rocketName}</div>
           <div className="description">
             {description}
           </div>
-          <Button variant="primary"
+          <Button
+            variant="primary"
             className="reserveRocket"
             onClick={() => {
               dispatch(reserveRocket({ id }));
             }}
-          >Reserve rocket</Button>
+          >
+            Reserve rocket
+          </Button>
         </div>
       )}
 
       {reserved && (
-        <div className="rocketInfo"  >
+        <div className="rocketInfo">
           <div>{rocketName}</div>
           <div className="description">
-            <div className="reserved" >Reserved</div>  {description}
+            <div className="reserved">Reserved</div>
+            {' '}
+            {description}
           </div>
-          <Button variant="primary"
+          <Button
+            variant="primary"
             className="cancelRocket"
             onClick={() => {
               dispatch(cancelRocket({ id }));
             }}
-          >Cancel Reservation</Button>
+          >
+            Cancel Reservation
+          </Button>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 Rocket.propTypes = {
   id: PropTypes.string,
@@ -81,6 +88,14 @@ Rocket.propTypes = {
 
 Rocket.defaultProps = {
   flickrImages: '',
+};
+
+Rocket.propTypes = {
+  reserved: PropTypes.string,
+};
+
+Rocket.defaultProps = {
+  reserved: '',
 };
 
 export default Rocket;

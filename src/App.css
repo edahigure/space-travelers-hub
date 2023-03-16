@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -76,7 +77,6 @@
   padding-left: 24px;
 }
 
-
 .li-item-profile {
   text-decoration: none;
   border-left: solid 2px black;
@@ -89,7 +89,7 @@
 }
 
 .rocketImg {
-width :200px;
+  width: 200px;
 }
 
 .rocketInfo {
@@ -102,7 +102,7 @@ width :200px;
 
 .description {
   text-align: left;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .reserved {
@@ -113,14 +113,14 @@ width :200px;
   color: white;
 }
 
-.listRockets{
+.listRockets {
   display: flex;
   flex-direction: column;
   margin-left: 12px;
   gap: 12px;
 }
 
-.reserveRocket{
+.reserveRocket {
   border-style: none;
   background-color: #0290ff;
   color: #fff;
@@ -129,7 +129,7 @@ width :200px;
   height: 35px;
 }
 
-.cancelRocket{
+.cancelRocket {
   color: grey;
   background-color: #fff;
   border-color: grey;
@@ -153,7 +153,7 @@ width :200px;
 }
 
 .wrapper {
-  display : flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
