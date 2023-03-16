@@ -18,7 +18,6 @@ const initialState = {
   rocketList: [
   ],
   status: 'idle',
-  error: null,
 };
 
 /* eslint no-param-reassign: "error" */
@@ -27,13 +26,33 @@ const rocketSlice = createSlice({
   name: 'rocket',
   initialState,
   reducers: {
-    addRocket: (state, action) => {
-      const newState = {
-        state,
-        bookList: [...state.bookList,
-          { ...action.payload }],
-      };
-      return newState;
+    reserveRocket: (state, action) => {
+      const { id } = action.payload;
+
+       const newRocketList = state.rocketList.map((rocket) => {
+       
+        if (rocket.id !== id) { 
+          return { ...rocket }
+        }
+        return { ...rocket, reserved: true } 
+      }) 
+      console.log(newRocketList);
+      return { rocketList: newRocketList, status: state.status }
+    
+    },
+    cancelRocket: (state, action) => {
+      const { id } = action.payload;
+
+       const newRocketList = state.rocketList.map((rocket) => {
+       
+        if (rocket.id !== id) { 
+          return { ...rocket }
+        }
+        return { ...rocket, reserved: false } 
+      }) 
+      console.log(newRocketList);
+      return { rocketList: newRocketList, status: state.status }
+    
     },
   },
   extraReducers(builder) {
@@ -48,14 +67,14 @@ const rocketSlice = createSlice({
             description: action.payload[el].description,
             flickrImages: action.payload[el].flickr_images[1],
           };
-          newRocketList.push(newRocket); 
+          newRocketList.push(newRocket);
         });
-        state.rocketList = newRocketList; 
+        state.rocketList = newRocketList;
 
       });
   },
 
 });
 
-export const { addRocket } = rocketSlice.actions;
+export const { reserveRocket, cancelRocket } = rocketSlice.actions;
 export default rocketSlice.reducer;

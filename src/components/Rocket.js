@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { useDispatch } from 'react-redux';
+import { reserveRocket, cancelRocket } from '../redux/rockets/rocketsSlice';
+
 
 const Rocket = (props) => {
   const {
@@ -8,18 +10,43 @@ const Rocket = (props) => {
     rocketName,
     description,
     flickrImages,
+    reserved,
   } = props;
+  const dispatch = useDispatch();
   return (
     <div className="rocketCard">
-      <img src={flickrImages} className="rocketImg"/>
+      <img src={flickrImages} className="rocketImg" />
 
-      <div className="rocketInfo"  >
-        <div>{rocketName}</div>
-        <div className="description">
-          {description}
+      {!reserved && (
+
+        <div className="rocketInfo"  >
+          <div>{rocketName}</div>
+          <div className="description">
+            {description}
+          </div>
+          <Button variant="primary"
+            className="reserveRocket"
+            onClick={() => {
+              dispatch(reserveRocket({ id }));
+            }}
+          >Reserve rocket</Button>
         </div>
-        <Button variant="primary">Go somewhere</Button>
-      </div>
+      )}
+
+      {reserved && (
+        <div className="rocketInfo"  >
+          <div>{rocketName}</div>
+          <div className="description">
+            <div className="reserved" >Reserved</div>  {description}
+          </div>
+          <Button variant="primary"
+            className="cancelRocket"
+            onClick={() => {
+              dispatch(cancelRocket({ id }));
+            }}
+          >Cancel Reservation</Button>
+        </div>
+      )}
     </div>
   )
 }

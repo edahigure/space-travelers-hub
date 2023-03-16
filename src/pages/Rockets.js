@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import {addRocket, fetchRockets } from '../redux/rockets/rocketsSlice';
+import { addRocket, fetchRockets } from '../redux/rockets/rocketsSlice';
 import Rocket from '../components/Rocket'
 
 export default function Rockets() {
@@ -18,6 +18,7 @@ export default function Rockets() {
   }, [status, dispatch]);
 
   const myRockets = [];
+
   for (let i = 0; i < rocketList.length; i += 1) {
     const str = `rocket${i}`;
     myRockets.push(<Rocket
@@ -26,12 +27,14 @@ export default function Rockets() {
       rocketName={rocketList[i].rocketName}
       description={rocketList[i].description}
       flickrImages={rocketList[i].flickrImages}
+      reserved={rocketList[i].reserved}
     />);
   }
 
+
   return (
     <div className="listRockets">
-       {myRockets}
+      {myRockets}
     </div>
   )
 }

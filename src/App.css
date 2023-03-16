@@ -66,6 +66,15 @@
   text-decoration: none;
 }
 
+.li-active {
+  text-decoration-style: initial;
+}
+
+.li-item-profile {
+  border-left: solid 2px black;
+  padding-left: 24px;
+}
+
 .rocketCard {
   display: flex;
   flex-direction: row;
@@ -84,10 +93,16 @@ width :200px;
 }
 
 .description {
-  display: flex;
-  justify-items: flex-start;
   text-align: left;
   font-size: .7rem;
+}
+
+.reserved {
+  float: left;
+  margin-right: 6px;
+  background-color: #1b8f9e;
+  border-radius: 4px;
+  color: white;
 }
 
 .listRockets{
@@ -95,4 +110,22 @@ width :200px;
   flex-direction: column;
   margin-left: 12px;
   gap: 12px;
+}
+
+.reserveRocket{
+  border-style: none;
+  background-color: #0290ff;
+  color: #fff;
+  border-radius: 4px;
+  width: 120px;
+  height: 35px;
+}
+
+.cancelRocket{
+  color: grey;
+  background-color: #fff;
+  border-color: grey;
+  border-radius: 4px;
+  width: 150px;
+  height: 35px;
 }

@@ -23,9 +23,12 @@ function App() {
         </div>
 
         <ul className="list-1">
-          <li><NavLink to="/rockets" className="li-item">Rockets</NavLink></li>
-          <li><NavLink to="/missions" className="li-item">Missions</NavLink></li>
-          <li><NavLink to="/profile" className="li-item">My Profile</NavLink></li>
+          <li><NavLink to="/rockets" className={({ isActive }) => (isActive ? "li-active" : "li-item")}
+          >Rockets</NavLink></li>
+          <li><NavLink to="/missions" className={({ isActive }) => (isActive ? "li-active" : "li-item")}
+          >Missions</NavLink></li>
+          <li><NavLink to="/profile" className={({ isActive }) => (isActive ? "li-active" : "li-item-profile")}
+          >My Profile</NavLink></li>
         </ul>
       </nav>
 
