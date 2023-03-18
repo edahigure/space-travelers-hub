@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import {
-  Table, Container,
-} from 'react-bootstrap';
+import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
 import Mission from './Misson';

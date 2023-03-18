@@ -5,6 +5,7 @@ import MyMissions from './pages/Missions';
 import MyProfile from './pages/MyProfile';
 import './styling/Nav.css';
 import './styling/MyProfile.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => (
   <Router>
