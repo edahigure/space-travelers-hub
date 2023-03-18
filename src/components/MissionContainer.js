@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
 import Mission from './Misson';
 
-const MissionsContainer = () => {
+function MissionsContainer() {
   const missionObj = useSelector((state) => state.missions.missions);
   const { length } = missionObj;
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const MissionsContainer = () => {
     if (length === 0) {
       dispatch(fetchMissions());
     }
-  }, [dispatch]);
+  }, [dispatch, length]);
 
   return (
     <Container fluid className="table-responsive-sm">
@@ -40,6 +40,6 @@ const MissionsContainer = () => {
       </Table>
     </Container>
   );
-};
+}
 
 export default MissionsContainer;

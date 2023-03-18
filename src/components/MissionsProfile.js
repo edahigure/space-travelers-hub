@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-const MissionsProfile = () => {
+function MissionsProfile() {
   const missions = useSelector((state) => state.missions.missions);
   const reservedMissions = missions.filter((x) => x.reserved);
   return (
@@ -15,6 +15,6 @@ const MissionsProfile = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MissionsProfile;
