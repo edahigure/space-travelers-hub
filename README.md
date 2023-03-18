@@ -35,13 +35,9 @@
 
 # 📖 spacetraveler<a name="about-project"></a>
 
-Understand how to use medium-fidelity wireframes to create a UI.
-Follow text written requirements (e.g., user stories).
-Use GitFlow to work with other developers in a team.
-Solve simple git conflicts.
-Write clear, professional, and respectful review comments for other team members.
-Explain "why" a change is requested when giving a code review.
-Perform a code review for a team member.
+ Here we work with the real live data from the SpaceX API. The task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+
+
 
 ## 🛠 Built With <a name="built-with"></a>
 HTML
@@ -180,10 +176,10 @@ GitHub: [@githubhandle](https://github.com/elad237)
 - Twitter: [@twitterhandle](https://twitter.com/Elad59380989)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tumbu-elad-896ab2183/)
 
-👤 **Name**
-GitHub: [@githubhandle]()
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+👤 **Edahi Antonio Gutiérrez Reyes**
+GitHub: [@githubhandle](https://github.com/edahigure)
+- Twitter: [@twitterhandle](https://twitter.com/edahigure)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/edahigure/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

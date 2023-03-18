@@ -25,7 +25,8 @@ const missionSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissions.fulfilled, (state, { payload }) => {
-        state.missions = payload.map((x) => ({ ...x, reserved: false }));
+        const newState = { missions: payload.map((x) => ({ ...x, reserved: false })) };
+        return newState;
       });
   },
   /* eslint-enable no-param-reassign */
