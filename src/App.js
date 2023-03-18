@@ -10,7 +10,6 @@ const App = () => (
   <Router>
     <Nav />
     <Routes>
-      <Route path="/" element={<Rockets />} />
       <Route path="/missions" element={<MyMissions />} />
       <Route path="/myprofile" element={<MyProfile />} />
     </Routes>
