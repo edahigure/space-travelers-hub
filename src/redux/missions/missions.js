@@ -21,7 +21,7 @@ const missionSlice = createSlice({
         } return mission;
       });
     },
-  }, /* eslint-disable no-param-reassign */
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissions.fulfilled, (state, { payload }) => {
@@ -29,7 +29,6 @@ const missionSlice = createSlice({
         return newState;
       });
   },
-  /* eslint-enable no-param-reassign */
 });
 
 export const { toogleReserve } = missionSlice.actions;
