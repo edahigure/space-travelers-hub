@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
 import MyMissions from './pages/Missions';
-import Rockets from './pages/Rockets';
 import MyProfile from './pages/MyProfile';
 import './styling/Nav.css';
 import './styling/MyProfile.css';
