@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My Connected React-Redux Component should render with given state from Redux store 1`] = `
+<div
+  className="rocketCard"
+>
+  <img
+    alt="rocket"
+    className="rocketImg"
+  />
+  <div
+    className="rocketInfo"
+  >
+    <div
+      data-testid="rocketName"
+    >
+      Starship
+    </div>
+    <div
+      className="description"
+    />
+    <button
+      className="reserveRocket btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve rocket
+    </button>
+  </div>
+</div>
+`;

@@ -19,7 +19,7 @@ const Rocket = (props) => {
       {!reserved && (
 
         <div className="rocketInfo">
-          <div>{rocketName}</div>
+          <div data-testid="rocketName">{rocketName}</div>
           <div className="description">
             {description}
           </div>
@@ -37,7 +37,7 @@ const Rocket = (props) => {
 
       {reserved && (
         <div className="rocketInfo">
-          <div>{rocketName}</div>
+          <div data-testid="rocketName">{rocketName}</div>
           <div className="description">
             <div className="reserved">Reserved</div>
             {' '}
@@ -98,4 +98,8 @@ Rocket.defaultProps = {
   reserved: false,
 };
 
-export default Rocket;
+function sum(a, b) {
+  return a + b;
+}
+
+export {Rocket, sum};
