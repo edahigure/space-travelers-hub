@@ -13,7 +13,7 @@ function MissionsContainer() {
     if (length === 0) {
       dispatch(fetchMissions());
     }
-  }, [dispatch]);
+  }, [dispatch, length]);
 
   return (
     <Container fluid className="table-responsive-sm">
