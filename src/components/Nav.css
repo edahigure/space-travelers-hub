@@ -1,0 +1,25 @@
+.list-1 {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.li-item {
+  text-decoration: none;
+}
+
+.li-active {
+  text-decoration-style: initial;
+}
+
+.li-active-profile {
+  text-decoration-style: initial;
+  border-left: solid 2px black;
+  padding-left: 24px;
+}
+
+.li-item-profile {
+  text-decoration: none;
+  border-left: solid 2px black;
+  padding-left: 24px;
+}

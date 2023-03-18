@@ -1,10 +1,18 @@
 import React from 'react';
 import MissionsProfile from '../components/MissionsProfile';
+import ProfileRocket from '../components/ProfileRocket';
 
-const MyProfile = () => (
-  <div className="profile-container">
-    <MissionsProfile />
-  </div>
-);
+function MyProfile() {
+  return (
+    <div>
+
+      <div className="profile-container">
+        <ProfileRocket />
+        <MissionsProfile />
+      </div>
+
+    </div>
+  );
+}
 
 export default MyProfile;

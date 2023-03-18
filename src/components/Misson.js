@@ -6,42 +6,40 @@ import {
 import { useDispatch } from 'react-redux';
 import { toogleReserve } from '../redux/missions/missions';
 
-const Mission = ({
+function Mission({
   missionId, missionName, description, reserved,
-}) => {
+}) {
   const dispatch = useDispatch();
   const toogle = () => {
     dispatch(toogleReserve(missionId));
   };
   return (
-    <>
-      <tr key={missionId}>
-        <td><b>{missionName}</b></td>
-        <td>
-          {description}
-        </td>
-        <td className="px-4 align-middle">
-          {
+    <tr key={missionId}>
+      <td><b>{missionName}</b></td>
+      <td>
+        {description}
+      </td>
+      <td className="px-4 align-middle">
+        {
             reserved ? (
               <Badge className="bg-info">Active Member</Badge>
             ) : (
               <Badge className="bg-secondary">NOT A MEMBER</Badge>
             )
         }
-        </td>
-        <td className="px-4 align-middle">
-          {
+      </td>
+      <td className="px-4 align-middle">
+        {
             reserved ? (
               <Button variant="outline-danger" onClick={toogle}>Leave&nbsp;Mission</Button>
             ) : (
               <Button variant="outline-secondary" onClick={toogle}>Join&nbsp;Mission</Button>
             )
         }
-        </td>
-      </tr>
-    </>
+      </td>
+    </tr>
   );
-};
+}
 
 Mission.propTypes = {
   missionId: PropTypes.string.isRequired,
