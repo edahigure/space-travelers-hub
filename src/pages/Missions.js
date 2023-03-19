@@ -1,10 +1,8 @@
-import React from 'react'
+import React from 'react';
+import MissionsContainer from '../components/MissionContainer';
 
-export default function Missions() {
-  return (
-    <div>
-      Missions
-    </div>
-  )
+function MyMissions() {
+  return <div><MissionsContainer /></div>;
 }
 
+export default MyMissions;
