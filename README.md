@@ -76,6 +76,8 @@ React
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+[live demo](https://edahigure.github.io/space-travelers-hub/)
+
 <!-- > Here you can visit my live demo : -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
