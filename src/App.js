@@ -11,7 +11,7 @@ import Rockets from './pages/Rockets';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/space-travelers-hub">
       <Nav />
       <Routes>
         <Route index element={<Rockets />} />
